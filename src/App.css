@@ -1,0 +1,335 @@
+/* reset css */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* end reset css */
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(142deg, rgb(222, 246, 251) 0%, rgb(255, 255, 255) 14%);
+  font-family: "Inter", sans-serif;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 46px;
+  margin-bottom: 97px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.menus {
+  display: flex;
+}
+.menus-mobile {
+  width: 24px;
+  height: 24px;
+  display: none;
+}
+
+.dropdown {
+  padding: 0 44px;
+}
+
+.banner {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  margin-bottom: 157px;
+}
+.banner-reverse {
+  flex-direction: row-reverse;
+}
+.banner--tertiary {
+  width: auto;
+  padding: 0 75px;
+  align-items: center;
+  background-color: #F6F6F6;
+}
+.banner__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 75px;
+  padding-right: 75px;
+  flex: 1;
+}
+.banner__content--tertial {
+  padding-top: 0px;
+  padding-right: 90px;
+}
+.banner__title {
+  font-weight: 700;
+  font-size: 64px;
+  margin-bottom: 24px;
+}
+.banner__title--secondary {
+  font-size: 48px;
+}
+.banner__text {
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 39px;
+}
+.banner__image {
+  width: 48%;
+}
+.banner__image--tertiary {
+  width: 50%;
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 136px;
+}
+.company__title {
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #667085;
+}
+.company__list {
+  width: 100%;
+  display: flex;
+  background-color: rgba(209, 204, 204, 0.19);
+  padding: 19px 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.discuss {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 136px;
+}
+.discuss__caption {
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+.discuss__title {
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 38px;
+  text-align: center;
+}
+.discuss-user__list {
+  display: flex;
+  margin-left: -15px;
+  flex-wrap: wrap;
+}
+.discuss-user__item {
+  padding: 32px;
+  margin-left: 15px;
+  width: calc(33.3333333333% - 15px);
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  margin-bottom: 15px;
+}
+.discuss-user__img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+.discuss-user__name {
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 27px;
+  color: #272D38;
+}
+.discuss-user__content {
+  font-weight: 300;
+  font-size: 14px;
+  text-align: center;
+  color: #272D38;
+}
+
+.footer {
+  width: 100%;
+  background-color: #F6F6F6;
+  padding-top: 105px;
+  padding-bottom: 18px;
+}
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-menu__list {
+  display: flex;
+  justify-content: space-between;
+  margin-left: -178px;
+  margin-bottom: 110px;
+}
+.footer-menu__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 178px;
+  width: calc(25% - 178px);
+}
+.footer-menu__title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+.footer-menu__action {
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 24px;
+  color: #272D38;
+}
+.footer__copyright {
+  font-weight: 300;
+  font-size: 16px;
+  color: #272D38;
+}
+
+.arrow {
+  width: 35px;
+}
+
+@media screen and (max-width: 1066px) {
+  .banner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner-reverse {
+    flex-direction: column-reverse;
+  }
+  .banner--secondary {
+    flex-direction: column-reverse;
+  }
+  .banner--tertiary {
+    padding: 0 0px;
+  }
+  .banner__image {
+    width: 100%;
+  }
+  .banner__image--tertiary {
+    display: none;
+  }
+  .banner__content {
+    align-items: center;
+    padding-right: 0px;
+  }
+  .banner__content--tertial {
+    padding-top: 75px;
+    padding-right: 75px;
+  }
+  .banner__title {
+    text-align: center;
+  }
+  .banner__text {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 924px) {
+  .menus {
+    display: none;
+  }
+  .menus-mobile {
+    display: block;
+    color: gray;
+  }
+  .footer-menu__list {
+    flex-direction: column;
+    margin-bottom: 92px;
+  }
+  .footer-menu__item {
+    align-items: center;
+    margin-left: 178px;
+    width: calc(100% - 178px);
+    text-align: center;
+  }
+}
+@media screen and (max-width: 806px) {
+  .banner__title {
+    font-size: 40px;
+  }
+  .banner__text {
+    font-size: 16px;
+  }
+  .company__item {
+    width: 70px;
+  }
+  .discuss__caption {
+    font-size: 12px;
+  }
+  .discuss__title {
+    font-size: 32px;
+  }
+  .discuss-user__item {
+    width: calc(50% - 15px);
+  }
+}
+@media screen and (max-width: 428px) {
+  .discuss-user__item {
+    width: calc(100% - 15px);
+    margin-bottom: 40px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

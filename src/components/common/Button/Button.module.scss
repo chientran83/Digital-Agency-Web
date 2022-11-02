@@ -1,0 +1,26 @@
+.btn {
+    padding: 10px 31px;
+    outline: none;
+    border: none;
+    background-color: #8EADD5;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+.secondary {
+  background-color: transparent;
+  padding: 0px;
+}
+
+@media screen and (max-width: 1066px) {
+    .btn {
+      font-size: 14px;
+      margin-bottom: 48px;
+    }
+    .secondary {
+      transform: rotate(90deg);
+    }
+  }
