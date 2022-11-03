@@ -1,0 +1,16 @@
+.footer {
+    width: 100%;
+    background-color: #F6F6F6;
+    padding-top: 105px;
+    padding-bottom: 18px;
+  }
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-copyright {
+    font-weight: 300;
+    font-size: 16px;
+    color: #272D38;
+  }
