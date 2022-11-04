@@ -1,42 +1,40 @@
-import User1Image from '../../../assets/images/western-man-4975942-4159828 1.png'
-import User2Image from '../../../assets/images/western-man-4975942-4159828 2.png'
-import User3Image from '../../../assets/images/western-man-4975942-4159828 3.png'
-import styles from './Discuss.module.scss'
+import React from 'react'
 import classNames from 'classnames/bind'
+
+import styles from './Discuss.module.scss'
 import DiscussItem from './DiscussItem'
+import { getUsers } from '../../../services'
 
 const cx = classNames.bind(styles);
 
+interface User {
+    image: String,
+    name: String,
+    content: String
+}
+
 const Discuss: React.FC = () => {
-    const users = [
-        {
-            image : User1Image,
-            name : "Andrew Rathore",
-            content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel"
-        },
-        {
-            image : User2Image,
-            name : "Vera Duncan",
-            content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel"
-        },
-        {
-            image : User3Image,
-            name : "Mark Smith",
-            content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel"
-        },
-    ];
+    const [users, setUsers] = React.useState<User[] | null>(null);
+    React.useEffect(() => {
+        const setStateUsers = async () => {
+            const data = await getUsers();
+            setUsers(data)
+        }
+        setStateUsers();
+    }, [])
+
     return (
         <>
-            <div className="discuss">
-                <p className="discuss__caption">
+            <div className={cx("discuss")}>
+                <p className={cx("discuss__caption")}>
                     TESTIMONIALS
                 </p>
-                <p className="discuss__title">
+                <p className={cx("discuss__title")}>
                     Read What Other have to Say
                 </p>
-                <div className="discuss-user__list">
-                    {users.map((user,key) => {
-                        return <DiscussItem user={user} key={key}/>
+                <div className={cx("discuss-user__list")}>
+                    {users && users.map((user: User, key : Number) => {
+                        return <DiscussItem user={user} key={key} />
                     })}
                 </div>
             </div>
